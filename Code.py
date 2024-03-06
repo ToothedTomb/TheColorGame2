@@ -155,7 +155,7 @@ def countdown():
 
 
 root = tk.Tk()
-root.title("The Color Game 2 - BETA!")
+root.title("The Color Game 23!")
 my_menu = Menu(root)
 root.config(menu=my_menu)
 
@@ -167,15 +167,11 @@ def KeyboardShortcuts():
     root.title("Keyboard Shortcuts.")
 
     labelTitle = ttk.Label(
-        root, font=("Montserrat", 26, "bold", "underline"), anchor='center', text="Keyboard shortcuts.")
+        root, font=("Georgia", 26, "bold", "underline"), anchor='center', text="Keyboard shortcuts.")
     label = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="Press the 'Escape key' to exit the game.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="Press the 'Escape key' to exit the game.")
     labelTitle.pack(side="top", fill="x", pady=1)
     label.pack(side="top", fill="x", pady=2)
-    B1 = tk.Button(
-        root, text="Exit", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
-    B1.pack()
-
 
 def whoMadeThisGame():
     root = tk.Toplevel()
@@ -186,14 +182,11 @@ def whoMadeThisGame():
                  tkinter.PhotoImage(file='ColorGameForLinux.png'))
 
     labelTitle = ttk.Label(
-        root, font=("Montserrat", 26, "bold", "underline"), anchor='center', text="Who made this game?")
+        root, font=("Georgia", 26, "bold", "underline"), anchor='center', text="Who made this game?")
     label = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="Jonathan Steadman has made this game.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="Jonathan Steadman has made this game.")
     labelTitle.pack(side="top", fill="x", pady=1)
     label.pack(side="top", fill="x", pady=2)
-    B1 = tk.Button(
-        root, text="Exit", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
-    B1.pack()
 
 
 def howtoplay():
@@ -205,17 +198,17 @@ def howtoplay():
                  tkinter.PhotoImage(file='ColorGameForLinux.png'))
 
     labelTitle = ttk.Label(
-        root, font=("Montserrat", 26, "bold", "underline"), anchor='center', text="How to play this game?")
+        root, font=("Georgia", 26, "bold", "underline"), anchor='center', text="How to play this game?")
     label = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="You will need to type down the color of the text. Not what the text says what the color is.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="You will need to type down the color of the text. Not what the text says what the color is.")
     label3 = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="You will need to be fast to get more points but needs to be written correctly and the right color.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="You will need to be fast to get more points but needs to be written correctly and the right color.")
     labelw = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="You will lose one point if you make a mistake.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="You will lose one point if you make a mistake.")
     labelLevels = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="There are levels, the harder the level, the shorter time you have and you will need to be faster to type.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="There are levels, the harder the level, the shorter time you have and you will need to be faster to type.")
     label4 = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="Press the enter key to submit your answer.")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="Press the enter key to submit your answer.")
     labelTitle.pack(side="top", fill="x", pady=1)
     label.pack(side="top", fill="x", pady=2)
     label3.pack(side="top", fill="x", pady=3)
@@ -223,55 +216,74 @@ def howtoplay():
     labelLevels.pack(side="top",fill="x",pady=5)
     label4.pack(side="top", fill="x", pady=6)
 
-    B1 = tk.Button(
-        root, text="Exit", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
-    B1.pack()
-
 
 file_menu = Menu(my_menu, background="pink", activebackground="#23d18b")
 my_menu.add_cascade(
-    label="About:", font=("Montserrat", 18), activebackground="#23d18b", menu=file_menu)
+    label="About:", font=("Georgia", 18), activebackground="#23d18b", menu=file_menu)
 file_menu.add_command(
-    label="How to play this game?", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=howtoplay)
+    label="How to play this game?", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=howtoplay)
 file_menu.add_command(
-    label="Who made this game?", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=whoMadeThisGame)
+    label="Who made this game?", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=whoMadeThisGame)
 file_menu.add_command(
-    label="High Scores", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=show_high_scores)
+    label="High Scores", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=show_high_scores)
 file_menu.add_command(
-    label="Keyboard shortcuts.", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=KeyboardShortcuts)
+    label="Keyboard shortcuts.", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=KeyboardShortcuts)
 
 LevelMenu = Menu(my_menu, background="pink", activebackground="#23d18b")
 my_menu.add_cascade(
-    label="Levels:", font=("Montserrat", 18), activebackground="#23d18b", menu=LevelMenu)
+    label="Levels:", font=("Georgia", 18), activebackground="#23d18b", menu=LevelMenu)
 LevelMenu.add_command(
-    label="Easy - 100s.", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=level1)
+    label="1: Easy - 100s.", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=level1)
 LevelMenu.add_command(
-    label="Medium - 50s.", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=level2)
+    label="2: Medium - 50s.", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=level2)
 LevelMenu.add_command(
-    label="Hard - 30s.", font=("Montserrat", 18), activebackground="#23d18b", background="pink", command=level3)
+    label="3: Hard - 30s.", font=("Georgia", 18), activebackground="#23d18b", background="pink", command=level3)
 my_menu.configure(bg="pink")
 icon_image = tk.PhotoImage(file='ColorGameForLinux.png')
 root.iconphoto(True, icon_image)
 
 root.resizable(0, 0)
+rainbow_colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3',"grey","pink","light grey"]
 
+def cycle_rainbow_colors(event=None, color_index=[0]):
+    """
+    Cycles through the colors of the rainbow for the background.
+    Uses a mutable default argument to keep track of the color index across function calls.
+    """
+    # Get the current color index
+    current_index = color_index[0]
+    
+    # Change the background color of the root window
+    root.config(bg=rainbow_colors[current_index])
+    new_bg_color = rainbow_colors[current_index]
+    root.configure(bg=new_bg_color)
+    # Update the index for the next color
+    current_index = (current_index + 1) % len(rainbow_colors)
+    color_index[0] = current_index
+    timeLabel.config(bg=new_bg_color)
+    scoreLabel.config(bg=new_bg_color)
+    label.config(bg=new_bg_color)
+    Help.config(bg=new_bg_color)
+    
+def start_rainbow_effect(event):
+    cycle_rainbow_colors()
 style = Style()
 Help = tkinter.Label(root, text="The Color Game 2!",
-                     font=('Montserrat', 24, "bold", "underline"))
+                     font=('Georgia', 24, "bold", "underline"))
 Help.pack()
 timeLabel = tkinter.Label(root, text="Time left " +
-                          str(timeleft), font=('Montserrat', 28))
+                          str(timeleft), font=('Georgia', 28))
 timeLabel.pack()
 scoreLabel = tkinter.Label(root, text="Press enter to start:",
-                           font=('Montserrat', 28))
+                           font=('Georgia', 28))
 scoreLabel.pack()
-label = tkinter.Label(root, font=('Montserrat', 170))
+label = tkinter.Label(root, font=('Georgia', 170))
 label.pack()
-e = tkinter.Entry(root, font=("Montserrat", 28), bg='#23d18b',border='7px')
+e = tkinter.Entry(root, font=("Georgia", 28), bg='#23d18b',border='7px')
 root.bind('<Return>', startGame)
 e.pack()
 
-e.focus_set()
+#e.focus_set()
 def KeyPressEsc(event):
     root = tk.Toplevel()
     root.attributes("-topmost", True)
@@ -281,17 +293,17 @@ def KeyPressEsc(event):
                  tkinter.PhotoImage(file='ColorGameForLinux.png'))
 
     labelTitle = ttk.Label(
-        root, font=("Montserrat", 26, "bold", "underline"), anchor='center', text="Confirm to exit the game:")
+        root, font=("Georgia", 26, "bold", "underline"), anchor='center', text="Confirm to exit the game:")
     label = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="Are you sure you want to leave this game?")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="Are you sure you want to leave this game?")
 
     labelTitle.pack(side="top", fill="x", pady=1)
     label.pack(side="top", fill="x", pady=2)
     B1 = tk.Button(
-        root, text="Yes", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.quit)
+        root, text="Yes", font=("Georgia", 28), bg="pink", activebackground='#23d18b', command=root.quit)
 
     B2 = tk.Button(
-        root, text="No", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
+        root, text="No", font=("Georgia", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
     B1.pack(side=tkinter.LEFT, anchor=CENTER)
     B2.pack(side=tkinter.RIGHT, anchor=CENTER)
 
@@ -305,23 +317,25 @@ def on_closing():
                  tkinter.PhotoImage(file='ColorGameForLinux.png'))
 
     labelTitle = ttk.Label(
-        root, font=("Montserrat", 26, "bold", "underline"), anchor='center', text="Confirm to exit the game:")
+        root, font=("Georgia", 26, "bold", "underline"), anchor='center', text="Confirm to exit the game:")
     label = ttk.Label(
-        root, font=("Montserrat", 16, "bold",), anchor='center', text="Are you sure you want to leave this game?")
+        root, font=("Georgia", 16, "bold",), anchor='center', text="Are you sure you want to leave this game?")
 
     labelTitle.pack(side="top", fill="x", pady=1)
     label.pack(side="top", fill="x", pady=2)
     B1 = tk.Button(
-        root, text="Yes", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.quit)
+        root, text="Yes", font=("Georgia", 28), bg="pink", activebackground='#23d18b', command=root.quit)
 
     B2 = tk.Button(
-        root, text="No", font=("Montserrat", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
+        root, text="No", font=("Georgia", 28), bg="pink", activebackground='#23d18b', command=root.destroy)
     B1.pack(side=tkinter.LEFT, anchor=CENTER)
     B2.pack(side=tkinter.RIGHT, anchor=CENTER)
 
+root.bind('<Control-Shift-t>', cycle_rainbow_colors)
 
-root.geometry("900x500")
+root.geometry("900x560")
 
 root.bind('<Escape>', KeyPressEsc)
 root.protocol("WM_DELETE_WINDOW", on_closing)
+root.bind('<Control-Shift-T>', start_rainbow_effect)
 root.mainloop()
